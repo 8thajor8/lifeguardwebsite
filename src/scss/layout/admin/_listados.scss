@@ -1,0 +1,156 @@
+.heading_admin{
+    font-weight: $bold;
+    color: $azul;
+}
+
+.alerta{
+    padding: .5rem;
+    text-align: center;
+    color: $blanco;
+    font-weight: $bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    text-shadow: 1px 1px 2px $negro ;
+    &.error{
+        background-color: $rojo;
+    }
+    &.exito{
+        background-color: $verde;
+    }
+    &.act{
+        background-color: $amarillo;
+    }
+}
+
+.contenedor_listados{
+    overflow-x: auto;
+}
+table.listados{
+    margin-top: 4rem;
+    width: 100%;
+    border-spacing: 0;
+    thead{
+        background-color: $azul;
+        th{
+            color: $blanco;
+            padding: 2rem;
+        }
+    }
+    .imagen-tabla{
+        width: 10rem;
+    }
+    td{
+        text-align: center;
+        .status_label{
+            cursor: pointer;
+            &:hover{
+                background-color: darken($rojo,10%);
+            }
+        }
+    }
+}
+
+.imagen-small{
+    width: 20rem;
+}
+
+.listado_appointments{
+    padding: 1rem;
+    .list_header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+
+        }
+         button,
+         a{
+                margin-top: 0;
+            }
+        .list_filtros{
+           
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 0;
+            @include tablet{
+                 margin-right: 5rem;
+                 flex-direction: row;
+            }
+            input,
+            select{
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                
+            }
+            input{
+                min-width: 25rem;
+            }
+           
+        }
+    }
+
+    table{
+        width: 100%;
+        overflow-x: auto;
+        tbody{
+            td{
+                padding: 0 1rem;
+                .status{
+                padding: .7rem 1rem ;
+                border-radius: 1rem;
+                text-transform: uppercase;
+                font-weight: $black;
+                color: white;
+                white-space: nowrap;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                }
+                .status-open {
+                    background-color: $amarillo; /* Color for status 1 */
+                }
+
+                .status-cancelled {
+                    background-color: $rojo; /* Color for status 3 */
+                }
+
+                .status-default {
+                    background-color: $azul; /* Color for status 4 */
+                }
+
+                .status-finished {
+                    background-color: $verde; /* Color for status 2 */
+                }
+            
+            }
+            
+        }
+    }
+    
+}
+
+.list_botones{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include tablet{
+    flex-direction: row;
+    gap: 2rem;
+    }
+}
+
+.link-listados{
+    color: $azul;
+    font-weight: $black;
+    background-color: $gris;
+    padding: .7rem;
+    border-radius: 1rem;
+    
+}

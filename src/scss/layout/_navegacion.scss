@@ -1,0 +1,173 @@
+.barra{
+    display: flex;
+    flex-direction: column;
+    
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba($color: #fafafa, $alpha: .4);
+        border-radius: .5rem;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
+        padding: 0 2rem;
+        
+        &.fixed{
+            position: fixed;
+            z-index: 3;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: rgba($color: #706b6b, $alpha: .7);
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
+            padding: .5rem 2rem;
+            padding-right: 2rem;
+
+            img{
+                width: 15rem;
+            }
+            
+            a{
+                color: $azul;
+                font-weight: 900;
+                font-size: 1.6rem;
+            }
+        }
+    }
+    
+    img{
+        width: 15rem;
+
+        @include tablet{
+            width: 25rem;
+        }
+    }
+
+    .active{
+        color: $rojo;
+    }
+
+    .barra-interna{
+        background-color: rgba($color: #fafafa, $alpha: .4);
+        border-radius: .5rem;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+
+        @include tablet{
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        &__tel{
+            display: flex;
+            align-items: center;
+
+            @include tablet{
+                margin-left: 10rem;
+            }
+
+            a{
+                text-decoration: none;
+                font-weight: $bold;
+
+                .phone__icon{
+                    width: 50px; /* Adjust this value to change the size */
+                    height: 50px; /* Adjust this value to change the size */
+                    background-color: $rojo;
+                    padding: .8rem;
+                    border-radius: 50%;
+                    color: $blanco;
+                    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
+                }
+            }
+
+            &__content{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                p{
+                    font-size: 1.8rem;
+                    color: $blanco;
+                    display: none;
+
+                    &:hover{
+                    color: $rojo;
+                }
+
+                    @include tablet{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    
+}
+
+.navegacion{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s ease-in-out, opacity .5s ease-in-out;
+    @include tablet{
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        visibility: visible;
+    }
+    a{
+        color: $blanco;
+        text-decoration: none;
+        
+        font-size: 1.8rem;
+        font-weight: $bold;
+        display: block;
+        text-align: center;
+        
+        @include tablet{
+            margin-right: 3rem;
+            font-size: 1.5rem;
+            &:last-of-type{
+                margin-right: 0;
+            }
+            &:hover{
+                color: $rojo;
+            }
+        }
+    }
+    a.logueado {
+    // Additional styles for <a> tags with class typea
+    color: $rojo;
+    &:hover{
+        color: $blanco;
+    }
+    
+    }
+    a.deslogueado {
+    // Additional styles for <a> tags with class typea
+    color: $amarillo;
+    &:hover{
+        color: $blanco;
+    }
+    }
+}
+
+.mobile-menu{
+    margin-bottom: 1rem;
+    @include tablet{
+        display: none;
+        
+    }
+    img{
+        width: 5rem;
+    }
+
+}
+
+.mostrar{
+    visibility: visible;
+    opacity: 1;
+}
