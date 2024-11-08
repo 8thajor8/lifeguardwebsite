@@ -1,26 +1,17 @@
 #aboutus {
-    
-    background-image: url(../img/junglebackground.svg);
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat; 
     position: relative;
-   
     .seccion{
         margin: 0 auto;
-        max-width: 120rem;
+        max-width: 140rem;
         width: 95%;
-        padding: 2.5rem;
+        margin-bottom: 6rem;
         position: relative;
         text-align: center;
         @include tablet{
             text-align: left;
+            padding: 10rem;
         }
-        h2{
-            color: $azul;
-            font-weight: $bold;
-        }
+        
     }
 
 }   
@@ -32,6 +23,7 @@
         @include tablet{
             display: flex;
             align-items: center;   
+            gap: 4rem;
             
         }
         margin-bottom: 5rem;
@@ -94,12 +86,14 @@
                 justify-content: center;
                 align-items: center;
                 
+                
             }
             img {
                 width: 100%;
                 max-width: 40rem;
                 border-radius: 1rem;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                
+                box-shadow: 0 13px 27px -5px rgba(50, 50, 93, .25), 0 8px 16px -8px rgba(0, 0, 0, .3);
             }
         }
     }

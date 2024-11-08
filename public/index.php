@@ -23,6 +23,7 @@ $router = new Router();
 
 //Pagina
 $router->get('/', [PaginasController::class, 'index']);
+$router->get('/insurers', [PaginasController::class, 'insurers']);
 $router->get('/clinicas', [PaginasController::class, 'clinicas']);
 $router->get('/appointments', [PaginasController::class, 'appointments']);
 $router->post('/appointments', [PaginasController::class, 'appointments']);
@@ -65,30 +66,6 @@ $router->get('/testimoniales/actualizar', [TestimonialsController::class, 'actua
 $router->post('/testimoniales/actualizar', [TestimonialsController::class, 'actualizar']);
 $router->post('/testimoniales/eliminar', [TestimonialsController::class, 'eliminar']);
 
-//Pacientes
-$router->get('/pacientes/listado', [PacientesController::class, 'listado']);
-$router->post('/pacientes/listado', [PacientesController::class, 'listado']);
-$router->get('/pacientes/crear', [PacientesController::class, 'crear']);
-$router->post('/pacientes/crear', [PacientesController::class, 'crear']);
-$router->get('/pacientes/actualizar', [PacientesController::class, 'actualizar']);
-$router->get('/pacientes/expediente', [PacientesController::class, 'expediente']);
-$router->post('/pacientes/actualizar', [PacientesController::class, 'actualizar']);
-$router->post('/api/pacientes', [APIPacientesController::class, 'guardar']);
-
-//Reportes
-$router->get('/reportes/listado', [ReportesController::class, 'listado']);
-$router->post('/reportes/listado', [ReportesController::class, 'listado']);
-$router->get('/reportes/crear', [ReportesController::class, 'crear']);
-$router->post('/reportes/crear', [ReportesController::class, 'crear']);
-$router->get('/reportes/actualizar', [ReportesController::class, 'actualizar']);
-$router->post('/reportes/actualizar', [ReportesController::class, 'actualizar']);
-$router->get('/reportes/expediente', [ReportesController::class, 'expediente']);
-$router->get('/reportes/descargar', [ReportesController::class, 'descargar']);
-$router->post('/reportes/expediente/adjuntar', [ReportesController::class, 'adjuntar']);
-
-//Addendums
-$router->get('/addendum/crear', [AddendumsController::class, 'crear']);
-$router->post('/addendum/crear', [AddendumsController::class, 'crear']);
 
 //Appointments
 $router->get('/appointments/listado', [AppointmentsController::class, 'listado']);

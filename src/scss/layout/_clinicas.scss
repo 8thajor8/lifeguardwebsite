@@ -16,6 +16,15 @@
     background-size: cover;
     background-repeat: no-repeat; 
     padding: 2.5rem 0.5rem;
+    position: relative;
+    .overlay{
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .seccion{
+        position: relative;
+        z-index: 2;
+
+    }
     @include tablet{
         padding: 2.5rem 4rem;
     }
@@ -24,8 +33,13 @@
 
 .clinica{
     background-color: lighten($gris, 5);
-    border: 1px solid darken($gris, 10);
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, .25), 0 8px 16px -8px rgba(0, 0, 0, .3);
+    border-radius: 1.5rem;
     margin-bottom: 1rem;
+    img{
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+    }
     .contenido-clinica{
         padding: 4rem;
         h3, p{

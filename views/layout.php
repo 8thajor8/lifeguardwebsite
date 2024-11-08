@@ -90,10 +90,10 @@
                
 
                 <nav class="navegacion navegacion-index">
-                    <a href="<?php echo $inicio ? "#aboutus" : "/#aboutus" ?>" class="scroll">About Us</a>
-                    <a href="<?php echo $inicio ? "#technology" : "/#technology" ?>" class="scroll">Medical Technology</a>
                     <a href="<?php echo $inicio ? "#clinicas" : "#" ?>" class="scroll">Our Clinics</a>
                     <a href="<?php echo $inicio ? "#servicios" : "/#servicios" ?>" class="scroll">Services</a>
+                    <a href="<?php echo $inicio ? "#aboutus" : "/#aboutus" ?>" class="scroll">About Us</a>
+                    <a href="/insurers" >For Insurers</a>
                     <a href="<?php echo $auth ? "/logout" : "/login" ?>" class="<?php echo $auth ? "logueado" : "deslogueado" ?>"><?php echo $auth ? "Log Out" : "Log In" ?></a>
                     <?php if($auth){ ?>
                         <a href="/configuracion" class="deslogueado">Portal</a>
@@ -114,13 +114,11 @@
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
                 <a href="<?php echo $inicio ? "#telemedicine" : "/#telemedicine" ?>" class="scroll">Telemedicine Now</a>
-                <a href="<?php echo $inicio ? "#aboutus" : "/#aboutus" ?>" class="scroll">About Us</a>
-                <a href="<?php echo $inicio ? "#technology" : "/#technology" ?>" class="scroll">Medical Technology</a>
                 <a href="<?php echo $inicio ? "#clinicas" : "#" ?>" class="scroll">Our Clinics</a>
-                
-                
-                <a href="<?php echo $inicio ? "#contactus" : "/#contactus" ?>" class="scroll">Contact</a>
                 <a href="<?php echo $inicio ? "#servicios" : "/#servicios" ?>" class="scroll">Services</a>
+                <a href="<?php echo $inicio ? "#contactus" : "/#contactus" ?>" class="scroll">Contact</a>
+                <a href="<?php echo $inicio ? "#aboutus" : "/#aboutus" ?>" class="scroll">About Us</a>
+                <a href="/insurers" class="scroll">For Insurers</a>
                 <a href="<?php echo $auth ? "/logout" : "/login" ?>"><?php echo $auth ? "Log In" : "Log Out" ?></a>
                 
             </nav>

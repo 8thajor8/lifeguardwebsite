@@ -30,11 +30,9 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         column-gap: 2rem;
+        padding-top: 6rem;
+        padding-bottom: 10rem; 
         
-        h2,h3{
-            color: $blanco;
-            font-weight: $bold;
-        }
     }
 }
 
@@ -46,7 +44,7 @@
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: .8rem;
-    
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, .25), 0 8px 16px -8px rgba(0, 0, 0, .3);
     @include tablet{
         display: grid;
         grid-template-columns: 1fr 2fr;

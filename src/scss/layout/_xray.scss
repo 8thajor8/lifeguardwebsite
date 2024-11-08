@@ -1,16 +1,12 @@
 
 
 .contenido-xray{
-    background-image: url(../img/lightbackground.svg);
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat; 
+    background-color: $negro;
     
     h2{
         margin: 0;
         padding: 2rem;
-        color: #0f3973;
+        color: $blanco;
         font-size: 3rem;
         font-weight: 700;
         

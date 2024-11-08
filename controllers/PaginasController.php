@@ -24,6 +24,13 @@ class PaginasController{
 
     }
 
+    public static function insurers(Router $router){
+        
+
+        $router->render('pagina/insurers');
+
+    }
+
     public static function clinicas(Router $router){
         
         $clinicas = Clinica::all();

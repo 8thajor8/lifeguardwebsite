@@ -7,14 +7,19 @@
 
 
 .separator{
+    
     background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat; 
     padding: $separacion 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 0;
+    @include tablet{
+        min-height: 40vh;
+    }
     .overlay {
         position: absolute;
         top: 0;
